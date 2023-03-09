@@ -24,6 +24,7 @@ function ParticleGraphics()
 	for i,v in pairs(workspace:GetDescendants()) do
 		if v:IsA("ParticleEmitter") then
 			local GraphicsLevel = UserSettings().GameSettings.SavedQualityLevel.Value
+			if GraphicsLevel == 0 then GraphicsLevel = 1 end
 			local index = getParticle(v)
 			if index then
 				local Emitter = DefaultParticle[index]
