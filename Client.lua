@@ -1,4 +1,3 @@
-
 local DefaultParticle = {}
 
 for i,v in pairs(workspace:GetDescendants()) do
@@ -33,5 +32,5 @@ function ParticleGraphics()
 		end
 	end
 end
-
+ParticleGraphics()
 UserSettings().GameSettings:GetPropertyChangedSignal("SavedQualityLevel"):Connect(ParticleGraphics)
